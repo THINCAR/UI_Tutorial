@@ -188,25 +188,26 @@
   }
   </script>
   <script> 
+    $('#aa').show();
+    $('#bb').hide();
     function doShow1() { 
-        if ($('#aa').is(":visible")) { 
-           // id값을 받아서 숨기기 
-            $('#bb').hide();
-        
+        if ($('#aa').is(":visible")) {  
+            
         }   
-        else { 
-            $('#aa').show(); // id값을 받아서 보이기 
+        else {
+          $('#bb').hide();
+          $('#aa').show(); 
         } 
     } 
     </script>
     <script> 
         function doShow2() { 
             if ($('#bb').is(":visible")) { 
-                $('#aa').hide(); // id값을 받아서 숨기기 
               
             }   
             else { 
-                $('#bb').show(); // id값을 받아서 보이기 
+              $('#aa').hide(); 
+              $('#bb').show(); 
             } 
         } 
     </script>
