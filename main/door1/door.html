@@ -44,7 +44,9 @@
              <div class="job">Web designer</div>
            </div>
          </div>
-         <a href="../index.html"> <i class='bx bx-log-out' id="log_out" ></i></a>
+         <a href="../index.html">
+          <i class='bx bx-log-out' id="log_out" ></i>
+        </a>
      </li>
     </ul>
   </div>
@@ -131,35 +133,61 @@
 
   closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
+    menuBtnChange();
   });
 
-  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  searchBtn.addEventListener("click", ()=>{ 
     sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
+    menuBtnChange(); 
   });
 
-  // following are the code to change sidebar button(optional)
   function menuBtnChange() {
    if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
    }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
    }
   }
   </script>
   <script> 
     function doShow1() { 
         if ($('#aa').is(":visible")) { 
-           // id값을 받아서 숨기기 
             $('#bb').hide();
             $('#cc').hide(); 
         }   
         else { 
-            $('#aa').show(); // id값을 받아서 보이기 
+            $('#aa').show();
         } 
     } 
     </script>
+        <script>
+          function select(num) {
+              document.getElementById("audio").src = './uploads/result' + num + '.wav'
+          }
+  
+          for (i=0; i<10; i++) {
+              file = "./uploads/name" + i + ".txt";
+              var rawFile = new XMLHttpRequest();
+              rawFile.open("GET", file, false);
+              rawFile.onreadystatechange = function ()
+              {
+                  if(rawFile.readyState === 4)
+                  {
+                      if(rawFile.status === 200 || rawFile.status == 0)
+                      {
+                          var allText = rawFile.responseText;
+                          document.getElementById("name" + i).innerHTML = allText;
+                          document.getElementById("message" + i).style.visibility = "visible";
+                      }
+                      else{
+                          document.getElementById("name" + i).innerHTML = "";
+                          document.getElementById("message" + i).style.visibility = "hidden";
+                      }
+                  }
+              }
+              rawFile.send(null);
+          }       
+      </script>
   <script> 
     $('#aa').show();
     $('#bb').hide();
