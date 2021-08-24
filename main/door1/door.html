@@ -97,7 +97,7 @@
                         <div class="textbox">
                             <p>YY/MM/DD hh:mm:ss</p>
                         </div>
-                        <img src="1.jpg" class="img">
+                        <img src="http://192.168.0.21:8888/picture/next" class="img">
                         <label for="slide02" class="right"></label>
                     </a>
                 </li>
@@ -159,35 +159,35 @@
             $('#aa').show();
         } 
     } 
-    </script>
-        <script>
-          function select(num) {
-              document.getElementById("audio").src = './uploads/result' + num + '.wav'
-          }
+  </script>
+  <script>
+    function select(num) {
+        document.getElementById("audio").src = './uploads/result' + num + '.wav'
+    }
   
-          for (i=0; i<10; i++) {
-              file = "./uploads/name" + i + ".txt";
-              var rawFile = new XMLHttpRequest();
-              rawFile.open("GET", file, false);
-              rawFile.onreadystatechange = function ()
-              {
-                  if(rawFile.readyState === 4)
-                  {
-                      if(rawFile.status === 200 || rawFile.status == 0)
-                      {
-                          var allText = rawFile.responseText;
-                          document.getElementById("name" + i).innerHTML = allText;
-                          document.getElementById("message" + i).style.visibility = "visible";
-                      }
-                      else{
-                          document.getElementById("name" + i).innerHTML = "";
-                          document.getElementById("message" + i).style.visibility = "hidden";
-                      }
-                  }
-              }
-              rawFile.send(null);
-          }       
-      </script>
+    for (i=0; i<10; i++) {
+        file = "./uploads/name" + i + ".txt";
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    var allText = rawFile.responseText;
+                    document.getElementById("name" + i).innerHTML = allText;
+                    document.getElementById("message" + i).style.visibility = "visible";
+                }
+                else{
+                    document.getElementById("name" + i).innerHTML = "";
+                    document.getElementById("message" + i).style.visibility = "hidden";
+                }
+            }
+        }
+        rawFile.send(null);
+    }       
+  </script>
   <script> 
     $('#aa').show();
     $('#bb').hide();
