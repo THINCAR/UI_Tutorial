@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="http://code.jquery.com/jquery-latest.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-user icon'></i>
+        <div class="logo_name">XXX님</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <button onclick="javascript:doShow1()">
+          <i class='bx bx-door-open'></i>
+          <span class="links_name">냉장고 내부</span>
+        </button>
+         <span class="tooltip">냉장고 내부</span>
+      </li>
+      <li>
+        <button onclick="javascript:doShow2()">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">메뉴 추천</span>
+        </button>
+       <span class="tooltip">메뉴추천</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section"> 
+    <div id="aa">
+      <div class="video">영상자리</div>
+      <div class="refri-object">
+        <div class= "refri-name">냉장고 내부 식재료</div>
+        <img src="메모지1.png" alt="" class="list-image">
+        <div class="refri-in">사과, 바나나, 오렌지, 감자, 브로콜리, 호박, 토마토, 오이, 계란, 포도, 레몬, 파인애플</div>
+      <div class="object-1 a">
+        <div class="O-box"></div>
+        <img src="사과.png" alt=""class="O-img">
+        <div class="number">12</div>    
+      </div>  
+      <div class="object-1 b">
+        <div class="O-box"></div>
+        <img src="바나나.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div>  
+      <div class="object-1 c">
+        <div class="O-box"></div>
+        <img src="레몬.png" alt=""class="O-img">
+        <div class="number">2</div>    
+      </div> 
+      <div class="object-1 d">
+        <div class="O-box"></div>
+        <img src="포도.png" alt=""class="O-img">
+        <div class="number">3</div>    
+      </div> 
+      <div class="object-2 a">
+        <div class="O-box"></div>
+        <img src="파인애플.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div>  
+      <div class="object-2 b">
+        <div class="O-box"></div>
+        <img src="브로콜리.png" alt=""class="O-img">
+        <div class="number">4</div>    
+      </div>  
+      <div class="object-2 c">
+        <div class="O-box"></div>
+        <img src="딸기.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div> 
+      <div class="object-2 d">
+        <div class="O-box"></div>
+        <img src="딸기.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div> 
+      <div class="object-3 a">
+        <div class="O-box"></div>
+        <img src="딸기.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div>  
+      <div class="object-3 b">
+        <div class="O-box"></div>
+        <img src="딸기.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div>  
+      <div class="object-3 c">
+        <div class="O-box"></div>
+        <img src="딸기.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div> 
+      <div class="object-3 d">
+        <div class="O-box"></div>
+        <img src="딸기.png" alt=""class="O-img">
+        <div class="number">1</div>    
+      </div> 
+      </div>
+      </div>
+    <div id="bb">
+      <div class="stage">
+        <div class="food1">
+          <input type="checkbox" id="popup">
+          <label for="popup">
+            <img src="삼계탕.jpg" class="image">
+            <div class="food-name">삼계탕</div>
+          </label>
+          <div>
+            <div>
+              <label for="popup"></label>
+            </div>
+            <label for="popup"></label>
+        </div>
+        <div class="food2">
+          <input type="checkbox" id="popup">
+          <label for="popup">
+            <img src="삼계탕.jpg" class="image">
+            <div class="food-name">삼계탕</div>
+          </label>
+          <div>
+            <div>
+              <label for="popup"></label>
+            </div>
+            <label for="popup"></label>
+        </div>
+        <div class="food3">
+          <input type="checkbox" id="popup">
+          <label for="popup">
+            <img src="삼계탕.jpg" class="image">
+            <div class="food-name">삼계탕</div>
+          </label>
+          <div>
+            <div>
+              <label for="popup"></label>
+            </div>
+            <label for="popup"></label>
+        </div>
+        <div class="food4">
+          <input type="checkbox" id="popup">
+          <label for="popup">
+            <img src="삼계탕.jpg" class="image">
+            <div class="food-name">삼계탕</div>
+          </label>
+          <div>
+            <div>
+              <label for="popup"></label>
+            </div>
+            <label for="popup"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+  <script> 
+    function doShow1() { 
+        if ($('#aa').is(":visible")) { 
+           // id값을 받아서 숨기기 
+            $('#bb').hide();
+        
+        }   
+        else { 
+            $('#aa').show(); // id값을 받아서 보이기 
+        } 
+    } 
+    </script>
+    <script> 
+        function doShow2() { 
+            if ($('#bb').is(":visible")) { 
+                $('#aa').hide(); // id값을 받아서 숨기기 
+              
+            }   
+            else { 
+                $('#bb').show(); // id값을 받아서 보이기 
+            } 
+        } 
+    </script>
+</body>
+</html>

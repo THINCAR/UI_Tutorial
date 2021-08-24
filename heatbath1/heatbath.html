@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="http://code.jquery.com/jquery-latest.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-user icon'></i>
+        <div class="logo_name">XXX님</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <button onclick="javascript:doShow1()">
+          <i class='bx bx-bed'></i>
+          <span class="links_name">전기장판</span>
+        </button>
+         <span class="tooltip">전기장판</span>
+      </li>
+      <li>
+        <button onclick="javascript:doShow2()">
+        <i class='bx bx-bath' ></i>
+         <span class="links_name">욕조</span>
+        </button>
+       <span class="tooltip">욕조</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section"> 
+    <div id="aa">
+      <div class="con_toggle">
+        <div class="i_icon">
+          <i class='bx bx-bed'></i>
+        </div> 
+        <div class="icon_name">전기장판</div>
+        <div class="toggle-btn" onclick="this.classList.toggle('active')">
+          <div class="inner-circle"></div>
+        </div> 
+      </div>
+      <div class="total-1">
+        <button class="button a" onclik=""> 1단계</button>
+        <button class="button b" onclik="">2단계</button>
+        <button class="button c" onclik="">3단계</button>
+        <button class="button d" onclik="">4단계</button>
+        <button class="button e " onclik="">5단계</button>
+      </div>
+      <div class="total-2">
+        <button class="button a" onclik=""> 1단계</button>
+        <button class="button b" onclik="">2단계</button>
+        <button class="button c" onclik="">3단계</button>
+        <button class="button d" onclik="">4단계</button>
+        <button class="button e " onclik="">5단계</button>
+    </div>
+    </div>
+    <div id="bb">
+      <div class="con_toggle">
+        <div class="i_icon-2">
+          <i class='bx bx-bath'></i>
+         </div> 
+        <div class="icon_name-2">욕조</div>
+        <div class="toggle-btn" onclick="this.classList.toggle('active')">
+          <div class="inner-circle"></div>
+        </div> 
+      </div>
+      <div class="total-1">
+        <button class="button a" onclik=""> 1단계</button>
+        <button class="button b" onclik="">2단계</button>
+        <button class="button c" onclik="">3단계</button>
+        <button class="button d" onclik="">4단계</button>
+        <button class="button e " onclik="">5단계</button>
+      </div>
+      <div class="total-2">
+        <button class="button a" onclik=""> 1단계</button>
+        <button class="button b" onclik="">2단계</button>
+        <button class="button c" onclik="">3단계</button>
+        <button class="button d" onclik="">4단계</button>
+        <button class="button e " onclik="">5단계</button>
+    </div>
+    </div>
+  </section>
+  <script>  
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('li').on('click',function(){
+        $(this).siblings().removeClass('act');
+        $(this).addClass('act');
+      })
+    })
+  </script>
+    <script> 
+      function doShow1() { 
+          if ($('#aa').is(":visible")) { 
+             // id값을 받아서 숨기기 
+              $('#bb').hide();
+              $('#cc').hide(); 
+          }   
+          else { 
+              $('#aa').show(); // id값을 받아서 보이기 
+          } 
+      } 
+      </script>
+      <script> 
+          function doShow2() { 
+              if ($('#bb').is(":visible")) { 
+                  $('#aa').hide(); // id값을 받아서 숨기기 
+                  $('#cc').hide();
+              }   
+              else { 
+                  $('#bb').show(); // id값을 받아서 보이기 
+              } 
+          } 
+      </script>
+</body>
+</html>
