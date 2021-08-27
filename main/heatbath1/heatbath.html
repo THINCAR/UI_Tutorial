@@ -44,56 +44,75 @@
   </div>
   <section class="home-section"> 
     <div id="aa">
-      <div class="con_toggle">
-        <div class="i_icon">
-          <i class='bx bx-bed'></i>
-        </div> 
+      <div class="i_icon">
+        <i class='bx bx-bed'></i>
         <div class="icon_name">전기장판</div>
+      </div> 
+      <div class="con1">
+        <div class="name">OFF/ON</div>
+        <div class="name">온도</div>  
+     </div>
+     <div class="con2">
         <div class="toggle-btn" onclick="this.classList.toggle('active')">
           <div class="inner-circle"></div>
-        </div> 
+        </div>
+        <ul class="a">
+          <li class="active1"><button onclik="">1단계</button></li>
+          <li><button onclik="">2단계</button></li>
+          <li><button onclik="">3단계</button></li>
+          <li><button onclik="">4단계</button></li>
+          <li><button onclik="">5단계</button></li>
+        </ul>  
       </div>
-      <div class="total-1">
-        <button class="button a" onclik=""> 1단계</button>
-        <button class="button b" onclik="">2단계</button>
-        <button class="button c" onclik="">3단계</button>
-        <button class="button d" onclik="">4단계</button>
-        <button class="button e " onclik="">5단계</button>
-      </div>
-      <div class="total-2">
-        <button class="button a" onclik=""> 1단계</button>
-        <button class="button b" onclik="">2단계</button>
-        <button class="button c" onclik="">3단계</button>
-        <button class="button d" onclik="">4단계</button>
-        <button class="button e " onclik="">5단계</button>
-    </div>
     </div>
     <div id="bb">
-      <div class="con_toggle">
-        <div class="i_icon-2">
-          <i class='bx bx-bath'></i>
-         </div> 
-        <div class="icon_name-2">욕조</div>
+      <div class="i_icon">
+        <i class='bx bx-bath'></i>
+        <div class="icon_name">욕조</div>
+      </div> 
+      <div class="con1">
+        <div class="name">OFF/ON</div>
+        <div class="name">온도</div>
+        <div class="name">수위</div>
+      </div>
+      <div class="con2">
         <div class="toggle-btn" onclick="this.classList.toggle('active')">
           <div class="inner-circle"></div>
         </div> 
+        <ul class="a">
+          <li class="active1"><button onclik="">1단계</button></li>
+          <li><button onclik="">2단계</button></li>
+          <li><button onclik="">3단계</button></li>
+          <li><button onclik="">4단계</button></li>
+          <li><button onclik="">5단계</button></li>
+        </ul> 
+        <ul class="b">
+          <li class="active2"><button onclik="">1단계</button></li>
+          <li><button onclik="">2단계</button></li>
+          <li><button onclik="">3단계</button></li>
+          <li><button onclik="">4단계</button></li>
+          <li><button onclik="">5단계</button></li>
+        </ul> 
       </div>
-      <div class="total-1">
-        <button class="button a" onclik=""> 1단계</button>
-        <button class="button b" onclik="">2단계</button>
-        <button class="button c" onclik="">3단계</button>
-        <button class="button d" onclik="">4단계</button>
-        <button class="button e " onclik="">5단계</button>
-      </div>
-      <div class="total-2">
-        <button class="button a" onclik=""> 1단계</button>
-        <button class="button b" onclik="">2단계</button>
-        <button class="button c" onclik="">3단계</button>
-        <button class="button d" onclik="">4단계</button>
-        <button class="button e " onclik="">5단계</button>
-    </div>
     </div>
   </section>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('li').on('click',function(){
+        $(this).siblings().removeClass('active1');
+        $(this).addClass('active1');
+      })
+    })
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('li').on('click',function(){
+        $(this).siblings().removeClass('active2');
+        $(this).addClass('active2');
+      })
+    })
+  </script>
   <script>  
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
@@ -127,28 +146,28 @@
     })
   </script>
   <script> 
-    $('#aa').show();
-    $('#bb').hide();
-    function doShow1() { 
-        if ($('#aa').is(":visible")) {  
+  $('#aa').show();
+  $('#bb').hide();
+  function doShow1() { 
+      if ($('#aa').is(":visible")) {  
+          
+      }   
+      else {
+        $('#bb').hide();
+        $('#aa').show(); 
+      } 
+  } 
+  </script>
+  <script> 
+      function doShow2() { 
+          if ($('#bb').is(":visible")) { 
             
-        }   
-        else {
-          $('#bb').hide();
-          $('#aa').show(); 
-        } 
-    } 
-    </script>
-    <script> 
-        function doShow2() { 
-            if ($('#bb').is(":visible")) { 
-              
-            }   
-            else { 
-              $('#aa').hide(); 
-              $('#bb').show(); 
-            } 
-        } 
-    </script>
+          }   
+          else { 
+            $('#aa').hide(); 
+            $('#bb').show(); 
+          } 
+      } 
+  </script>
 </body>
 </html>
